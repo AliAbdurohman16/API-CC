@@ -18,7 +18,12 @@ exports.up = function(knex) {
     table.timestamp('created_at').defaultTo(knex.fn.now());
     table.timestamp('updated_at').defaultTo(knex.fn.now());
 
-    table.foreign('category_id').references('id').inTable('categories');
+    table
+      .foreign('category_id', 'works_category_id_foreign')
+      .references('id')
+      .inTable('categories')
+      .onDelete('CASCADE')
+      .onUpdate('CASCADE');
   });
 };
 
