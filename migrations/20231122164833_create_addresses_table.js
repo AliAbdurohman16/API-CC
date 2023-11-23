@@ -18,7 +18,12 @@ exports.up = function(knex) {
     table.timestamp('created_at').defaultTo(knex.fn.now());
     table.timestamp('updated_at').defaultTo(knex.fn.now());
 
-    table.foreign('user_id').references('id').inTable('users');
+    table
+      .foreign('user_id', 'addresses_user_id_foreign')
+      .references('id')
+      .inTable('users')
+      .onDelete('CASCADE')
+      .onUpdate('CASCADE');
   });
 };
 
