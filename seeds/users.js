@@ -21,7 +21,7 @@ exports.seed = async function(knex) {
       photo: 'default.jpg',
       fullname: 'Admin',
       telephone: '082323123',
-      email: 'admin@gmail',
+      email: 'admin@gmail.com',
       password: hashedPasswords[0],
       role: 'admin'
     },
@@ -29,7 +29,7 @@ exports.seed = async function(knex) {
       photo: 'default.jpg',
       fullname: 'Recruiter',
       telephone: '086328328',
-      email: 'recruiter@gmail',
+      email: 'recruiter@gmail.com',
       password: hashedPasswords[1],
       role: 'recruiter'
     },
@@ -37,7 +37,7 @@ exports.seed = async function(knex) {
       photo: 'default.jpg',
       fullname: 'User',
       telephone: '08343487834',
-      email: 'user@gmail',
+      email: 'user@gmail.com',
       password: hashedPasswords[2],
       role: 'user'
     }
