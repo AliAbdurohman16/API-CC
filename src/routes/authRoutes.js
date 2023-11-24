@@ -11,6 +11,16 @@ const routes = [
         path: '/login/user',
         handler: AuthController.loginUser,
     },
+    {
+        method: 'POST',
+        path: '/register/recruiter',
+        handler: AuthController.registerRecruiter,
+    },
+    {
+        method: 'POST',
+        path: '/login/recruiter',
+        handler: AuthController.loginRecruiter,
+    }
 ];
 
 module.exports = routes;
